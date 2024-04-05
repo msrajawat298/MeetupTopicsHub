@@ -76,11 +76,23 @@ I'd be glad to provide examples and guidance on how to address common mistakes m
    - These issues represent weaknesses in the code that could be exploited by attackers to compromise the security of the system.
    - Examples of vulnerabilities include SQL injection, cross-site scripting (XSS), and insecure cryptographic algorithms.
 
+4. **New Security Hotspot**:
+  - A security hotspot highlights a security-sensitive piece of code that the developer needs to review. 
+  - Upon review, you'll either find there is no threat or you need to apply a fix to secure the code.
+
+### [Difference between Security Hotspot vs Vulnerability](https://docs.sonarsource.com/sonarqube/latest/user-guide/security-hotspots/#vulnerability-or-hotspot)
+  - With a hotspot, a security-sensitive piece of code is highlighted, but the overall application security may not be impacted. 
+  - It's up to the developer to review the code to determine whether or not a fix is needed to secure the code.
+  - With a vulnerability, a problem that impacts the application's security has been discovered and needs to be fixed immediately.
+
+
+
 Each of these categories can be further classified based on severity, which indicates the level of impact the issue has on the codebase and the application:
 
 - **Blocker**:
   - Blocker issues are critical problems that prevent the code from functioning properly or meeting essential requirements.
   - These issues must be addressed immediately as they severely impact the stability and functionality of the application.
+  - example, the application crashes on startup. This is a blocker because you can't do anything with the application until this is fixed.
 
 - **Critical**:
   - Critical issues are severe problems that significantly impact the performance, security, or maintainability of the code.
@@ -99,6 +111,21 @@ Each of these categories can be further classified based on severity, which indi
   - These issues provide helpful insights or guidance for improving the codebase but are not critical to the functionality or security of the application.
 
 By categorizing coding issues into these classifications, SonarQube provides developers with a structured approach to identifying and prioritizing issues for resolution, ultimately helping to improve the overall quality and reliability of the codebase.
+
+## How it helps for different users in Organization
+
+### Developers
+
+As SonarQube provide details of different errors and coding quality level analysis it helps developers to improve the code quality and also helps to improve the coding skills. The developer can improve knowledge about the coding standards, best practices and etc. Regularly use of the SonarQube leads developers to identify the coding standard violations and they tend to adhere to those standards even at the time of coding.
+
+### Technical management
+
+SonarQube supports easy integration with version control system to track down the code changes along with developer’s detail who made those changes. This helps to identify the developer’s performance in coding practices.
+
+### Non-technical management
+
+Non-Technical management wants to see how measurable code quality and code security are going on. They don’t understand complexity and duplications. But with the matrix and total numbers, it is easy to make a decision for each project.
+
 
 ## Download Sonarqube
 - [Click me to Download SonarQube](https://www.sonarsource.com/products/sonarqube/downloads/)
